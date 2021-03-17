@@ -4,12 +4,11 @@
 
 # Site
 title: Daniel's Blog
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+subtitle: hey
+description: 我的个人博客
+author: Daniel Liu
+language: zh-Hans
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -97,9 +96,11 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: inside
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:liuilin/liuilin.github.io.git
+  branch: master
