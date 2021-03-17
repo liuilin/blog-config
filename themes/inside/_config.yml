@@ -1,0 +1,412 @@
+# ---------------------------------------------------------------
+# Basic
+# ---------------------------------------------------------------
+
+# Appearance
+appearance:
+  # Accent color, default '#2a2b33'
+  accent_color:
+  # Font color, default '#363636'
+  foreground_color:
+  # Border color, default '#e0e0e0'
+  border_color:
+  # body background, default '#f5f7fa'
+  background:
+  # Sidebar background (when opened), default to accent_color
+  sidebar_background:
+  # Card background, default '#fff'
+  card_background:
+
+  # All background settings above support image, e.g.,
+  # '//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png #f5f7fa' or
+  # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
+
+  # Maximum width of content
+  # content_width: 640
+
+  # Fonts
+  font:
+    # Url of font css file
+    # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
+    url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
+
+    # Base font which applied to body
+    base: "'Josefin Sans', 'PingFang SC'"
+    # Sidebar author font, fallback to `base`
+    logo:
+    # Sidebar menu font, fallback to `base`
+    menu: 'Baloo Bhaijaan'
+    # Font for:
+    # - percentage on the fab button
+    # - month text on archives page
+    # - count
+    # - pager
+    # - toc index
+    # - category pill
+    # fallback to `base`
+    label: Montserrat
+    # Headline(h1, h2, h3, h4, h5, h6) font, fallback to `base`
+    heading:
+    # Code and code block
+    code: Inconsolata, monospace
+    # Base font for printing which applied to body
+    print:
+
+  # Code Syntax Highlighting
+  # Uses an architecture called "base16" (https://github.com/chriskempson/base16),
+  # the default theme is a customized Atelier Dune Light theme,
+  # please feel free to explore more.
+  highlight:
+
+  # Default Light by Chris Kempson (http://chriskempson.com)
+  # highlight: [
+  #   '#f8f8f8', '#e8e8e8', '#d8d8d8', '#b8b8b8',
+  #   '#585858', '#383838', '#282828', '#181818',
+  #   '#ab4642', '#dc9656', '#f7ca88', '#a1b56c',
+  #   '#86c1b9', '#7cafc2', '#ba8baf', '#a16946'
+  # ]
+
+  # Harmonic16 Light by Jannik Siebert (https://github.com/janniks)
+  # highlight: [
+  #   '#f7f9fb', '#e5ebf1', '#cbd6e2', '#aabcce',
+  #   '#627e99', '#405c79', '#223b54', '#0b1c2c',
+  #   '#bf8b56', '#bfbf56', '#8bbf56', '#56bf8b',
+  #   '#568bbf', '#8b56bf', '#bf568b', '#bf5656'
+  # ]
+
+  # Tomorrow Night by Chris Kempson (http://chriskempson.com)
+  # highlight: [
+  #   '#1d1f21', '#282a2e', '#373b41', '#969896',
+  #   '#b4b7b4', '#c5c8c6', '#e0e0e0', '#ffffff',
+  #   '#cc6666', '#de935f', '#f0c674', '#b5bd68',
+  #   '#8abeb7', '#81a2be', '#b294bb', '#a3685a'
+  # ]
+
+# Sidebar profile
+profile:
+  # `email` is used for gravatar(https://en.gravatar.com),
+  # fallback to `hexo.config.email` if not specified
+  # email: liu1142865396@gmail.com
+
+  # You can set Avatar URL directly
+  avatar: data:image/jpeg;base64,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
+
+  bio: I Need You To Tell Me That I’m A Good Person.
+
+# Sidebar navigation links
+menu:
+  Home: /
+  About: /about
+  Search: /search
+  # Links: /links
+  # Github: https://github.com/liuilin
+
+# Social media URL
+sns:
+  # Built-in icons
+  # `email`, `feed`, `github`, `twitter`, `facebook`, `instagram`, `tumblr`, `dribbble`, `telegram`
+  # `youtube`, `hangouts`, `linkedin`, `pinterest`, `soundcloud`, `myspace`, `weibo`, `qq
+  email: liu1142865396@gmail.com
+  github: https://github.com/liuilin
+  instagram: 
+  facebook: 
+
+  - icon: email
+    title: Email
+    url: # default to `profile.email`
+  - icon: feed
+    title: Feed
+    url: # default to `hexo.config.feed.path`
+
+  # custom icon
+  # - title: Email me
+  #   url: # default to `profile.email`
+  #   template: <i class="fa fa-github"></i>
+  # - title: Love you
+  #   url:
+  #   template: |
+  #     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+
+# Sidebar footer copyright info
+footer:
+  # Set to false to hide.
+  copyright: '&copy; 2021 • <a href="">Daniel Liu</a>'
+
+  # Set to false to hide Hexo link.
+  powered: false
+
+  # Set to false to hide theme link.
+  theme: false
+
+  # Custom text.
+  # custom: Hosted by <a target="_blank" rel="external nofollow"
+  #   href="https://pages.github.com/"><b>Github Pages</b></a>
+
+
+# ---------------------------------------------------------------
+# Content
+# ---------------------------------------------------------------
+
+# Page
+page:
+  # Display Table of content, default to `true`
+  # toc: false
+
+  # Display reward, default to `false`
+  # reward: true
+
+  # Display copyright notice, default to `false`
+  # copyright: true
+
+
+# Post
+post:
+  # per_page: 10
+  # reading_time: false
+  # reading_time:
+  #   wpm: 150
+  #   text: ":words words in :minutes min"
+
+  # The following settings are the same as the page
+  # toc: false
+  # reward: true
+  # copyright: true
+
+# Archive
+archive:
+  per_page: 10
+
+# Tag
+tag:
+  per_page: 10
+
+# Category
+category:
+  per_page: 10
+
+# Search
+search:
+  # Display a quick search button in fab
+  fab: true
+
+  # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
+  page: true
+
+  # Local search
+  # adapter:
+  #   range:
+  #     - post
+  #     - page
+  #   per_page: 20
+  #   limit: 10000
+
+  # Custom search
+  # adapter:
+  #   # Used for pagination
+  #   per_page: 10
+  #   # Optional
+  #   logo: //cdn.worldvectorlogo.com/logos/algolia.svg
+  #   request:
+  #     url: https://{APPLICATION_ID}-dsn.algolia.net/1/indexes/{INDEX}/query
+  #     method: post
+  #     # Available variables: :query, :per_page, :current
+  #     body: '{"query":":query","hitsPerPage":":per_page","page":":current"}'
+  #     headers:
+  #       X-Algolia-API-Key: {API_KEY}
+  #       X-Algolia-Application-Id: {APPLICATION_ID}
+  #       Content-Type: application/json; charset=UTF-8
+  #   keys:
+  #     # Used to retrieve result list
+  #     data: hits
+  #     # Used to retrieve current page number
+  #     current: page
+  #     # Used to retrieve total page number
+  #     total: nbPage
+  #     # Used to retrieve total hits number
+  #     hits: nbHits
+  #     # Used to retrieve cost time
+  #     time: processingTimeMS
+  #     # Used to retrieve title from per hit
+  #     title: _snippetResult.title.value
+  #     # Used to retrieve content from per hit
+  #     content: _snippetResult.content.value
+
+
+# ---------------------------------------------------------------
+# Content addons
+# ---------------------------------------------------------------
+
+# Prefix/Suffix of image URL, useful for CDN, for example,
+# `![cat](images/cat.gif)` will convert to
+# <img src="https://cdn.example.com/images/cat.gif?m=webp&q=80" alt="cat">
+assets:
+  # prefix: 'https://cdn.example.com'
+  # suffix: '?m=webp&q=80'
+
+# Table of content, enabled by default, set to `false` to disable.
+toc:
+  # The depth of toc, default to `3`, maximum to `4`.
+  # depth: 3
+
+  # Showing index before title, eg. 1.1 title, default to `true`
+  # index: true
+
+# Reward
+reward:
+  # Text which shows at the top.
+  # text: Buy me a cup of coffee ☕.
+
+  # Payment Methods
+  # qrcode, url and text must be set at least one
+  # wechat, alipay, paypal and bitcoin has a built-in icon,
+  # use `name` to apply
+  # methods:
+  #   - name: paypal
+  #     qrcode: paypal.jpg
+  #     url: https://paypal.me/imelmore
+  #     text: This is a paypal payment link
+  #     color: '#09bb07'
+
+# Copyright notice
+# It is possible to use front matter `copyright` to override this setting.
+copyright:
+  # Display author, default to `true`
+  # author: true
+
+  # Display link, default to `true`
+  # link: false
+
+  # license: Attribution-NonCommercial-NoDerivatives 4.0 International
+  #   (<a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\"
+  #   rel=\"external nofollow\" target=\"_blank\">CC BY-NC-ND 4.0</a>)
+
+  # Display published date, default to `false`
+  # published: false
+
+  # Display updated date, default to `false`
+  # updated: false
+
+  # Custom text, override above settings
+  # custom: my copyright
+
+# Comments
+# Built-in support Disqus (https://disqus.com) and LiveRe (https://livere.com),
+# for other comment system, see plugins
+comments:
+  # disqus:
+  #   shortname: disqus_shortname
+  #   # Or you can set disqus script URL directly
+  #   script: //disqus_shortname.disqus.com/embed.js
+  #   # Autoload, default to `true`, set to `false` to display a button
+  #   autoload: false
+
+  # livere:
+  #   uid: livere_uid
+  #   # LiveRe script, default to `https://cdn-city.livere.com/js/embed.dist.js`
+  #   script:
+  #   # Autoload, default to `true`, set to `false` to display a button
+  #   autoload: false
+
+
+# ---------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------
+
+# URL prefix for theme statics
+static_prefix:
+
+# URL prefix for json data
+# If your json file is put in a cdn server,
+# set data_prefix as '//cdn.com/path/to/path/your_json_dir' and data_dir as 'your_json_dir'
+data_prefix:
+
+# Folder where json file will be generated to, default to 'api'
+data_dir:
+
+# Favicon, default to `favicon.ico`
+favicon:
+
+# Google analytics
+# ga: UA-00000000-0
+
+# SEO
+seo:
+  # Render structured-data in <head>, default to `false`
+  # structured_data: true
+  # Server-side rendering (SSR), default to `false`
+  # ssr: true
+
+# PWA
+pwa:
+  # Workbox (https://developers.google.com/web/tools/workbox/) is a JavaScript
+  # libraries for adding offline support to web apps,
+  # disabled by default, remove the hash to enable
+  # workbox:
+  #   # Workbox cdn, uses google by default, below is an example of using alicdn
+  #   cdn: https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js
+  #   module_path_prefix: https://g.alicdn.com/kg/workbox/3.3.0/
+  #   # Expire time in hour, 4 by default, set to 0 to be permanent,
+  #   # caches will be forcibly deleted the next time the site is updated.
+  #   expire: 4
+  #   # The worker script name, `sw.js` by default
+  #   name: sw.js
+  #   # Custom rules
+  #   rules:
+  #     - name: jsdelivr
+  #       strategy: staleWhileRevalidate
+  #       regex: https://cdn\\.jsdelivr\\.net
+  #     - name: gtm
+  #       strategy: staleWhileRevalidate
+  #       regex: https://www\\.googletagmanager\\.com\?id=.*
+  #     - name: gravatar
+  #       strategy: staleWhileRevalidate
+  #       regex: https://www\\.gravatar\\.com
+  #     - name: theme
+  #       strategy: staleWhileRevalidate
+  #       regex: /.*\\.(?:js|css|woff2|png|jpg|gif)$
+  #     - name: cdn
+  #       strategy: staleWhileRevalidate
+  #       regex: https://cdn\\.yourdomain\\.com
+  #     - name: json
+  #       strategy: cacheFirst
+  #       regex: your_data_prefix/.*\\.json
+
+  # manifest.json
+  # manifest:
+  #   short_name:
+  #   name:
+  #   start_url: /
+  #   theme_color: '#2a2b33'
+  #   background_color: '#2a2b33'
+  #   icons:
+  #     - src: icon-194x194.png
+  #       sizes: 194x194 512x512
+  #       type: image/png
+  #     - src: icon-144x144.png
+  #       sizes: 144x144
+  #       type: image/png
+
+# Plugins
+# plugins:
+#   # Built-in plugins
+#   - cipher
+#   - cipher:
+#       placeholder: Passcode is required
+#       excerpt: Content encrypted
+#   - palette
+#   - position: sidebar
+#       template: |
+#         <is-palette palette="#673ab7,#3f51b5,#2196f3,#009688,#4caf50,#ff9800,#ff5722,#795548" col="4"></is-palette>
+
+#   # Global Inject script/style
+#   # By default script will be injected into <body>, and style will be injected into <head>
+#   # In general, script or style depends on their ext name.
+#   - xxx.css
+#   - xxx.jss
+
+#   # Dynamic inject html snippet
+#   - position: # sidebar | post | page | comments | avatar | head_begin | head_end | body_begin | body_end
+#     # HTML code
+#     template: <script>...</script>
+#     # Or a path relative to theme folder
+#     template: snippets/snippet-1.html
