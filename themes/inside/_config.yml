@@ -56,15 +56,15 @@ appearance:
   # Uses an architecture called "base16" (https://github.com/chriskempson/base16),
   # the default theme is a customized Atelier Dune Light theme,
   # please feel free to explore more.
-  highlight:
+  # highlight:
 
   # Default Light by Chris Kempson (http://chriskempson.com)
-  # highlight: [
-  #   '#f8f8f8', '#e8e8e8', '#d8d8d8', '#b8b8b8',
-  #   '#585858', '#383838', '#282828', '#181818',
-  #   '#ab4642', '#dc9656', '#f7ca88', '#a1b56c',
-  #   '#86c1b9', '#7cafc2', '#ba8baf', '#a16946'
-  # ]
+  highlight: [
+    '#f8f8f8', '#e8e8e8', '#d8d8d8', '#b8b8b8',
+    '#585858', '#383838', '#282828', '#181818',
+    '#ab4642', '#dc9656', '#f7ca88', '#a1b56c',
+    '#86c1b9', '#7cafc2', '#ba8baf', '#a16946'
+  ]
 
   # Harmonic16 Light by Jannik Siebert (https://github.com/janniks)
   # highlight: [
@@ -84,39 +84,44 @@ appearance:
 
 # Sidebar profile
 profile:
+  # 邮箱用于生成 gravatar 头像，如配置了 `hexo.config.email`，此项可缺省
   # `email` is used for gravatar(https://en.gravatar.com),
   # fallback to `hexo.config.email` if not specified
   # email: liu1142865396@gmail.com
 
-  # You can set Avatar URL directly
+  # You can set Avatar URL directly 也可以直接设置头像 URL
   avatar: data:image/jpeg;base64,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
-
+  
+  # 个性签名
   bio: I Need You To Tell Me That I’m A Good Person.
 
 # Sidebar navigation links
 menu:
-  Home: /
-  About: /about
-  Search: /search
+  主页: /
+  关于: /about
+  搜索: /search
+  Github: https://github.com/liuilin
   # Links: /links
   # Github: https://github.com/liuilin
 
-# Social media URL
+# Social media URL 
+# 设置 sidebar 底部社交媒体 URL。
 sns:
   # Built-in icons
   # `email`, `feed`, `github`, `twitter`, `facebook`, `instagram`, `tumblr`, `dribbble`, `telegram`
   # `youtube`, `hangouts`, `linkedin`, `pinterest`, `soundcloud`, `myspace`, `weibo`, `qq
+  zhihu: https://www.zhihu.com/people/xiao-shi-yilang-82-6
   email: liu1142865396@gmail.com
   github: https://github.com/liuilin
-  instagram: 
-  facebook: 
+  instagram: https://www.instagram.com/
+  facebook: https://www.facebook.com/
 
-  - icon: email
-    title: Email
-    url: # default to `profile.email`
-  - icon: feed
-    title: Feed
-    url: # default to `hexo.config.feed.path`
+  # - icon: email
+  #   title: Email
+  #   url: # default to `profile.email`
+  # - icon: feed
+  #   title: Feed
+  #   url: # default to `hexo.config.feed.path`
 
   # custom icon
   # - title: Email me
@@ -144,53 +149,154 @@ footer:
 
 
 # ---------------------------------------------------------------
-# Content
+# Content 内容相关
 # ---------------------------------------------------------------
 
-# Page
+# Page 页面
 page:
-  # Display Table of content, default to `true`
-  # toc: false
+  # Display Table of content, default to `true` 显示目录，默认启用，设置为 `false` 可禁用
+  toc: true
 
-  # Display reward, default to `false`
-  # reward: true
+  # Display reward, default to `false` 显示打赏，默认禁用，设置为 `true` 可启用
+  reward: true
 
-  # Display copyright notice, default to `false`
-  # copyright: true
+  # Display copyright notice, default to `false` 显示版权声明，默认禁用，设置为 `true` 可启用
+  copyright: true
 
 
 # Post
 post:
-  # per_page: 10
-  # reading_time: false
-  # reading_time:
-  #   wpm: 150
-  #   text: ":words words in :minutes min"
+  # 首页文章列表的分页大小，缺省值 `10`
+  per_page: 10
+  # 显示阅读时间，缺省值 `true`
+  # reading_time: false # 禁用
+  reading_time:
+    # 每分钟阅读字数
+    wpm: 200
+    # 展示文案
+    # 差值: `:words` 字数 `:minutes` 字数 / wpm
+    text: ":words words in :minutes min"
 
   # The following settings are the same as the page
   # toc: false
   # reward: true
   # copyright: true
 
-# Archive
+# Archive 归档页
 archive:
+  # 归档页分页大小，缺省值 `10`
   per_page: 10
 
-# Tag
 tag:
+  # 标签页分页大小，缺省值 `10`
   per_page: 10
 
-# Category
 category:
+  # 分类页分页大小，缺省值 `10`
   per_page: 10
+
+
+
+
+
+
+
 
 # Search
 search:
-  # Display a quick search button in fab
+  # 在页面右下角的 FAB 按钮里显示快捷搜索入口
   fab: true
 
-  # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
+  # 额外生成 search 页面，可配置在 sidebar 导航，如 `Search: /search`
   page: true
+
+  # 以上两个入口必须至少设置一个，否则视为无效配置
+
+  # 自定义搜索 API
+  adapter:
+    # 搜索结果分页大小，缺省值 `10`
+    per_page: 10
+    # LOGO 图，可选
+    logo: //cdn.worldvectorlogo.com/logos/algolia.svg
+    # 请求对象：此配置项为构造完整的请求对象
+    request:
+      # 接口 URL
+      # url: https://{APPLICATION_ID}-dsn.algolia.net/1/indexes/{INDEX}/query
+      url: https://Z9I4Z08O59-dsn.algolia.net/1/indexes/blog/query
+      
+      # GET 或 POST，不区分大小写，缺省值 `GET`
+      method: post
+
+      # 字符串差值 :query, :per_page, :current
+      # 请求参数，格式视 Content-Type 而定，支持的字符串插值有：
+      # 搜索的字符串 `:query`
+      # 分页大小 `:per_page`
+      # 当前页 `:current`
+      body: '{"query":":query","hitsPerPage":":per_page","page":":current"}'
+      headers:
+        # X-Algolia-API-Key: {API_KEY}
+        X-Algolia-API-Key: 40ac06c589c79f043c14ce74a01994f8
+        X-Algolia-Application-Id: Z9I4Z08O59
+        Content-Type: application/json; charset=UTF-8
+  # # 本地搜索，即生成本地 json 文件
+  # adapter:
+  #   # json 数据的范围，数组
+  #   range:
+  #     - post
+  #     - page
+
+  #   # json 数据的条目限制
+  #   # 假如 `limit:1000`，同时有 800 篇 post，800 篇 page，则最终生成的数据包含：
+  #   # 800 篇 post，200 篇 page
+  #   # 缺省值 `10000`
+  #   limit: 10000
+
+  #   # 搜索结果分页大小，缺省值 `10`
+  #   per_page: 5
+
+# algolia_search:
+#   enable: true
+#   hits:
+#     per_page: 10
+#   labels:
+#     input_placeholder: Search for Posts
+#     hits_empty: "We didn't find any results for the search: ${query}"
+#     hits_stats: "${hits} results found in ${time} ms"
+
+
+ 
+
+
+    # 用于统一数据格式，例如有如下返回结果
+    # {
+    #   "hits": [
+    #     {
+    #       "title": "Inside Theme Showcase",
+    #       "date": "2018-09-05T06:28:24.000Z",
+    #       "_snippetResult": {
+    #         "title": { "value": "" },
+    #         "content": { "value": "" }
+    #       }
+    #     }
+    #   ],
+    #   "nbHits": 10,
+    #   "page": 0,
+    #   "nbPages": 1,
+    #   "processingTimeMS": 5
+    # }
+    # 则设置   
+    keys:
+      data: hits
+      current: page
+      total: nbPage
+      hits: nbHits
+      time: processingTimeMS
+# search:
+#   # Display a quick search button in fab
+#   fab: true
+
+#   # Render a standalone searh page which can be configured in sidebar menu such as `Search: /search`
+#   page: true
 
   # Local search
   # adapter:
@@ -232,6 +338,23 @@ search:
   #     content: _snippetResult.content.value
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ---------------------------------------------------------------
 # Content addons
 # ---------------------------------------------------------------
@@ -253,9 +376,28 @@ toc:
 
 # Reward
 reward:
+# wechatpay: /WeChatPay.png
+# alipay: /Alipay.jpg
   # Text which shows at the top.
-  # text: Buy me a cup of coffee ☕.
+  text: Buy me a cup of coffee ☕.
 
+  # 支付方式列表，注意是数组
+  methods:
+    -
+    # wechat、alipay、paypal、bitcoin 对应四种不同的图标和配色
+    # 此外的任何自定义名称，都需要在语言文件内增加相应的语言，
+    # 同时配色与 appearance.accent_color 一致
+      name: ali
+      # 二维码地址
+      qrcode: /Alipay.jpg
+      # 显示一个链接
+      url:
+      # 若设置了 url，则此值会显示为链接的文本，否则为一段普通文本
+      text: alipay
+      # 选中时的颜色
+      color:
+
+      # qrcode、url 和 text 必须至少设置一项
   # Payment Methods
   # qrcode, url and text must be set at least one
   # wechat, alipay, paypal and bitcoin has a built-in icon,
@@ -267,9 +409,27 @@ reward:
   #     text: This is a paypal payment link
   #     color: '#09bb07'
 
+
+
+
+
+
+
 # Copyright notice
 # It is possible to use front matter `copyright` to override this setting.
 copyright:
+  # 显示作者，设置为 false 可隐藏。
+  author: false
+  # 显示文章链接，设置为 false 可隐藏。
+  link: false
+  # 版权声明
+  license: Attribution-NonCommercial-NoDerivatives 4.0 International<br>(<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener" target="_blank">CC BY-NC-ND 4.0</a>)
+  # 显示发表日期，默认不显示，设置为 true 可显示。
+  published: true
+  # 显示修改日期，默认不显示，设置为 true 可显示。
+  updated: true
+  # 禁用以上设置，显示自定义信息
+  custom: 不许转载😡！！！
   # Display author, default to `true`
   # author: true
 
@@ -289,10 +449,34 @@ copyright:
   # Custom text, override above settings
   # custom: my copyright
 
+
+
+
+
+
+
+
+
 # Comments
 # Built-in support Disqus (https://disqus.com) and LiveRe (https://livere.com),
 # for other comment system, see plugins
 comments:
+  # Disqus
+  disqus:
+    # disqus shortname
+    shortname:
+    # disqus 脚本 URL，缺省值 `//shortname.disqus.com/embed.js`
+    script:
+    # 自动加载或显示为手动加载按钮，缺省值 `true`。
+    autoload:
+
+  # LiveRe
+  livere:
+    uid:
+    # LiveRe city 版脚本 URL，缺省值 `https://cdn-city.livere.com/js/embed.dist.js`
+    script:
+    # 自动加载或显示为手动加载按钮，缺省值 `true`。
+    autoload:
   # disqus:
   #   shortname: disqus_shortname
   #   # Or you can set disqus script URL directly
