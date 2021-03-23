@@ -110,5 +110,6 @@ deploy:
 algolia:
   applicationID: Z9I4Z08O59
   apiKey: 40ac06c589c79f043c14ce74a01994f8
+  adminApiKey: eb7ea6c282c0b96c53e25e4c70270726
   indexName: blog
   chunkSize: 5000
