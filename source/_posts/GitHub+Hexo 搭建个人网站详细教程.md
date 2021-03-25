@@ -372,9 +372,28 @@ sns:
 
 
 
+## FAQ
 
+1. hexo d 推送不上去
 
+   ```bash
+   fatal: unable to access 'https://gitclone.com/github.com/liuilin/liuilin.github.io.git/': The requested URL returned error: 504
+   FATAL {
+     err: Error: Spawn failed
+         at ChildProcess.<anonymous> (C:\Users\Daniel\blog\node_modules\hexo-util\lib\spawn.js:51:21)
+         at ChildProcess.emit (node:events:376:20)
+         at ChildProcess.cp.emit (C:\Users\Daniel\blog\node_modules\cross-spawn\lib\enoent.js:34:29)
+         at Process.ChildProcess._handle.onexit (node:internal/child_process:284:12) {
+       code: 128
+     }
+   } Something's wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html
+   ```
 
+   Git config 配置了以下加速 GitHub 代码下载配置，导致全局走了这个地址，取消掉此配置（将 v2ray 开启全局代理，Git config 配置https.proxy=socks5://127.0.0.1:10808）即可解决
+
+   url.https://gitclone.com/github.com/.insteadof=https://github.com/
+
+2. 
 
 
 
