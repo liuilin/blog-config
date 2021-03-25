@@ -175,7 +175,7 @@ page:
 
 # Post
 post:
-  # 首页文章列表的分页大小，缺省值 `10`
+  # 首页文章列表的分页大小，缺省值 `10` ,shit
   per_page: 10
   # 显示阅读时间，缺省值 `true`
   # reading_time: false # 禁用
