@@ -379,6 +379,8 @@ sns:
 
    url.https://gitclone.com/github.com/.insteadof=https://github.com/
 
+   > 还有一种方案，hexo clean 之后重新 hexo d 部署
+
 2. Typora 上传图片失败
 
    方案：[配置Typora+PicGo+gitee过程中个别问题的解决](https://www.jianshu.com/p/3f1aa341dcbc)
