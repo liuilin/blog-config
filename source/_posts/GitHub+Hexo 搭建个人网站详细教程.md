@@ -160,7 +160,7 @@ $blog: git clone https://github.com/ikeq/hexo-theme-inside.git themes/inside
 
 ![image-20210319141245558](https://cdn.jsdelivr.net/gh/liuilin/image-bed@master/blog/img/image-20210319141245558.png)
 
-获取 GitHub Token ：
+在目录 Setting / Developer Settings / Personal access tokens 下获取 GitHub Token ：
 
 点击 Generate new token
 
@@ -354,20 +354,6 @@ sns:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 将需要上传至github的内容放在source文件夹，例如CNAME、favicon.ico、images等。
 
 
@@ -393,37 +379,6 @@ sns:
 
    url.https://gitclone.com/github.com/.insteadof=https://github.com/
 
-2. 
+2. Typora 上传图片失败
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   方案：[配置Typora+PicGo+gitee过程中个别问题的解决](https://www.jianshu.com/p/3f1aa341dcbc)

@@ -22,16 +22,17 @@ appearance:
   # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
 
   # Maximum width of content
-  # content_width: 640
+  content_width: 640
 
   # Fonts
   font:
     # Url of font css file
     # Below is a font set containing Baloo Bhaijaan, Josefin Sans, Montserrat and Inconsolata from Google Fonts.
+    # 字体 CSS 文件的 URL
     url: //fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat
 
     # Base font which applied to body
-    base: "'Josefin Sans', 'PingFang SC'"
+    base: "'Josefin Sans', 'PingFang SC', 'Microsoft YaHei'"
     # Sidebar author font, fallback to `base`
     logo:
     # Sidebar menu font, fallback to `base`
@@ -65,6 +66,13 @@ appearance:
     '#ab4642', '#dc9656', '#f7ca88', '#a1b56c',
     '#86c1b9', '#7cafc2', '#ba8baf', '#a16946'
   ]
+  # 备用
+  # highlight: [
+  # '#1d1f21', '#282a2e', '#373b41', '#969896',
+  # '#b4b7b4', '#c5c8c6', '#e0e0e0', '#ffffff',
+  # '#cc342b', '#f96a38', '#fba922', '#198844',
+  # '#3971ed', '#3971ed', '#a36ac7', '#3971ed'
+  # ]
 
   # Harmonic16 Light by Jannik Siebert (https://github.com/janniks)
   # highlight: [
@@ -102,13 +110,12 @@ profile:
 
 # Sidebar navigation links
 menu:
-  主页: /
-  关于: /about
-  搜索: /search
+  🏠　主页: /
+  # 🔗　邻居: /links
+  # 📝　关于: /about
+  🔍　搜索: /search
   Github: https://github.com/liuilin
   # Links: /links
-  # Github: https://github.com/liuilin
-
 
 
 
@@ -145,16 +152,17 @@ sns:
 footer:
   # Set to false to hide.
   copyright: '&copy; 2021 • <a href="">Daniel Liu</a>'
-
   # Set to false to hide Hexo link.
   powered: false
-
   # Set to false to hide theme link.
   theme: false
-
   # Custom text.
   # custom: Hosted by <a target="_blank" rel="external nofollow"
   #   href="https://pages.github.com/"><b>Github Pages</b></a>
+  custom: '<div><span title="总访客量"> UV : <span id="busuanzi_value_site_uv"></span></span> | <span title="总访问量"> PV : <span id="busuanzi_value_site_pv"></span></span></div>'
+
+
+
 
 
 # ---------------------------------------------------------------
@@ -165,12 +173,14 @@ footer:
 page:
   # Display Table of content, default to `true` 显示目录，默认启用，设置为 `false` 可禁用
   toc: true
-
   # Display reward, default to `false` 显示打赏，默认禁用，设置为 `true` 可启用
   reward: true
-
   # Display copyright notice, default to `false` 显示版权声明，默认禁用，设置为 `true` 可启用
   copyright: true
+
+
+
+
 
 
 # Post
@@ -185,21 +195,18 @@ post:
     # 展示文案
     # 差值: `:words` 字数 `:minutes` 字数 / wpm
     text: ":words words in :minutes min"
-
   # The following settings are the same as the page
-  # toc: false
-  # reward: true
-  # copyright: true
+  toc: true
+  reward: true
+  copyright: true
 
 # Archive 归档页
 archive:
   # 归档页分页大小，缺省值 `10`
   per_page: 10
-
 tag:
   # 标签页分页大小，缺省值 `10`
   per_page: 10
-
 category:
   # 分类页分页大小，缺省值 `10`
   per_page: 10
@@ -211,65 +218,83 @@ category:
 
 
 
-# Search
-        # X-Algolia-API-Key: {API_KEY}
+# # Search
+#         # X-Algolia-API-Key: {API_KEY}
+# search:
+#   # # 本地搜索，即生成本地 json 文件
+#   # adapter:
+#   #   # json 数据的范围，数组
+#   #   range:
+#   #     - post
+#   #     - page
+
+#   #   # json 数据的条目限制
+#   #   # 假如 `limit:1000`，同时有 800 篇 post，800 篇 page，则最终生成的数据包含：
+#   #   # 800 篇 post，200 篇 page
+#   #   # 缺省值 `10000`
+#   #   limit: 10000
+
+#   #   # 搜索结果分页大小，缺省值 `10`
+#   #   per_page: 5
+
+#   # 自定义搜索 API
+#   adapter:
+#     # 搜索结果分页大小，缺省值 `10`
+#     # LOGO 图，可选
+#     per_page: 10
+#     logo: //cdn.worldvectorlogo.com/logos/algolia.svg
+#     # 请求对象：此配置项为构造完整的请求对象
+#     request:
+#       # 接口 URL
+#       # url: https://{APPLICATION_ID}-dsn.algolia.net/1/indexes/{INDEX}/query
+#       url: https://Z9I4Z08O59-dsn.algolia.net/1/indexes/blog/query
+#       # GET 或 POST，不区分大小写，缺省值 `GET`
+#       method: POST
+#       # 字符串差值 :query, :per_page, :current
+#       # 请求参数，格式视 Content-Type 而定，支持的字符串插值有：
+#       # 搜索的字符串 `:query`
+#       # 分页大小 `:per_page`
+#       # 当前页 `:current`
+#       body: '{"query":":query","hitsPerPage":":per_page","page":":current"}'
+#       headers:
+#         X-Algolia-API-Key: 40ac06c589c79f043c14ce74a01994f8
+#         X-Algolia-Application-Id: Z9I4Z08O59
+#         Content-Type: application/json; charset=UTF-8
+#     keys:
+#       data: hits
+#       current: page
+#       total: nbPage
+#       hits: nbHits
+#       time: processingTimeMS
+#       title: _highlightResult.title.value
+#       content: _snippetResult.content.value
+#   # 在页面右下角的 FAB 按钮里显示快捷搜索入口
+#   fab: true
+
+#   # 额外生成 search 页面，可配置在 sidebar 导航，如 `Search: /search`
+#   page: true
+
+#   # 以上两个入口必须至少设置一个，否则视为无效配置
+
+
+
+# 上面全部暂时不要，舍弃，下面生效
 search:
-  # # 本地搜索，即生成本地 json 文件
-  # adapter:
-  #   # json 数据的范围，数组
-  #   range:
-  #     - post
-  #     - page
-
-  #   # json 数据的条目限制
-  #   # 假如 `limit:1000`，同时有 800 篇 post，800 篇 page，则最终生成的数据包含：
-  #   # 800 篇 post，200 篇 page
-  #   # 缺省值 `10000`
-  #   limit: 10000
-
-  #   # 搜索结果分页大小，缺省值 `10`
-  #   per_page: 5
-
-  # 自定义搜索 API
-  adapter:
-    # 搜索结果分页大小，缺省值 `10`
-    # LOGO 图，可选
-    per_page: 10
-    logo: //cdn.worldvectorlogo.com/logos/algolia.svg
-    # 请求对象：此配置项为构造完整的请求对象
-    request:
-      # 接口 URL
-      # url: https://{APPLICATION_ID}-dsn.algolia.net/1/indexes/{INDEX}/query
-      url: https://Z9I4Z08O59-dsn.algolia.net/1/indexes/blog/query
-      # GET 或 POST，不区分大小写，缺省值 `GET`
-      method: POST
-      # 字符串差值 :query, :per_page, :current
-      # 请求参数，格式视 Content-Type 而定，支持的字符串插值有：
-      # 搜索的字符串 `:query`
-      # 分页大小 `:per_page`
-      # 当前页 `:current`
-      body: '{"query":":query","hitsPerPage":":per_page","page":":current"}'
-      headers:
-        X-Algolia-API-Key: 40ac06c589c79f043c14ce74a01994f8
-        X-Algolia-Application-Id: Z9I4Z08O59
-        Content-Type: application/json; charset=UTF-8
-    keys:
-      data: hits
-      current: page
-      total: nbPage
-      hits: nbHits
-      time: processingTimeMS
-      title: _highlightResult.title.value
-      content: _snippetResult.content.value
-  # 在页面右下角的 FAB 按钮里显示快捷搜索入口
   fab: true
-
-  # 额外生成 search 页面，可配置在 sidebar 导航，如 `Search: /search`
   page: true
 
-  # 以上两个入口必须至少设置一个，否则视为无效配置
+  adapter:
+    range:
+      - post
+      - page
 
-  
+    limit: 10000
+    per_page: 5  
+
+
+
+
+
   # # 本地搜索，即生成本地 json 文件
   # adapter:
   #   # json 数据的范围，数组
@@ -390,7 +415,7 @@ search:
 # `![cat](images/cat.gif)` will convert to
 # <img src="https://cdn.example.com/images/cat.gif?m=webp&q=80" alt="cat">
 assets:
-  # prefix: 'https://cdn.example.com'
+  # prefix: '//cdn.jsdelivr.net/gh/idkzr/static@master'
   # suffix: '?m=webp&q=80'
 
 # Table of content, enabled by default, set to `false` to disable.
@@ -410,17 +435,16 @@ reward:
 
   # 支付方式列表，注意是数组
   methods:
-    -
+    - name: ali
     # wechat、alipay、paypal、bitcoin 对应四种不同的图标和配色
     # 此外的任何自定义名称，都需要在语言文件内增加相应的语言，
     # 同时配色与 appearance.accent_color 一致
-      name: ali
       # 二维码地址
       qrcode: /Alipay.jpg
       # 显示一个链接
       url:
       # 若设置了 url，则此值会显示为链接的文本，否则为一段普通文本
-      text: alipay
+      text: 支付宝
       # 选中时的颜色
       color:
 
@@ -451,6 +475,7 @@ copyright:
   link: false
   # 版权声明
   license: Attribution-NonCommercial-NoDerivatives 4.0 International<br>(<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener" target="_blank">CC BY-NC-ND 4.0</a>)
+  # license:  本博客所有文章除特别声明外，均采用(<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow" target="_blank">CC BY-NC-SA 4.0</a>)许可协议，转载请注明来源<a href="https://blog.zr.ci" rel="nofollow" target="_blank">箴扰</a>！
   # 显示发表日期，默认不显示，设置为 true 可显示。
   published: true
   # 显示修改日期，默认不显示，设置为 true 可显示。
@@ -519,83 +544,184 @@ comments:
   #   autoload: false
 
 
+
+
+
+
+
+
+
+
 # ---------------------------------------------------------------
 # Misc
 # ---------------------------------------------------------------
 
-# URL prefix for theme statics
-static_prefix:
+# # URL prefix for theme statics
+# static_prefix:
 
-# URL prefix for json data
-# If your json file is put in a cdn server,
-# set data_prefix as '//cdn.com/path/to/path/your_json_dir' and data_dir as 'your_json_dir'
-data_prefix:
+# # URL prefix for json data
+# # If your json file is put in a cdn server,
+# # set data_prefix as '//cdn.com/path/to/path/your_json_dir' and data_dir as 'your_json_dir'
+# data_prefix:
 
-# Folder where json file will be generated to, default to 'api'
-data_dir:
+# # Folder where json file will be generated to, default to 'api'
+# data_dir:
 
-# Favicon, default to `favicon.ico`
-favicon:
+# # Favicon, default to `favicon.ico`
+# favicon:
 
-# Google analytics
-# ga: UA-00000000-0
+# # Google analytics
+# # ga: UA-00000000-0
 
-# SEO
+# # SEO
+# seo:
+#   # Render structured-data in <head>, default to `false`
+#   # structured_data: true
+#   # Server-side rendering (SSR), default to `false`
+#   # ssr: true
+
+
+
+# 上面暂时注释，看区别
+#static_prefix: //cdn.jsdelivr.net/gh/idkzr/Blog@master
+
+#data_prefix: //cdn.jsdelivr.net/gh/idkzr/Blog@master/api
+data_dir: api
+
+favicon: favicon.ico
+
+#ga: UA-158646366-1
+
 seo:
-  # Render structured-data in <head>, default to `false`
-  # structured_data: true
-  # Server-side rendering (SSR), default to `false`
-  # ssr: true
+  structured_data: true
+  ssr: true
 
-# PWA
+
+
+
+
+
+
+
+
+
+
+
+# # PWA
+# pwa:
+#   # Workbox (https://developers.google.com/web/tools/workbox/) is a JavaScript
+#   # libraries for adding offline support to web apps,
+#   # disabled by default, remove the hash to enable
+#   # workbox:
+#   #   # Workbox cdn, uses google by default, below is an example of using alicdn
+#   #   cdn: https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js
+#   #   module_path_prefix: https://g.alicdn.com/kg/workbox/3.3.0/
+#   #   # Expire time in hour, 4 by default, set to 0 to be permanent,
+#   #   # caches will be forcibly deleted the next time the site is updated.
+#   #   expire: 4
+#   #   # The worker script name, `sw.js` by default
+#   #   name: sw.js
+#   #   # Custom rules
+#   #   rules:
+#   #     - name: jsdelivr
+#   #       strategy: staleWhileRevalidate
+#   #       regex: https://cdn\\.jsdelivr\\.net
+#   #     - name: gtm
+#   #       strategy: staleWhileRevalidate
+#   #       regex: https://www\\.googletagmanager\\.com\?id=.*
+#   #     - name: gravatar
+#   #       strategy: staleWhileRevalidate
+#   #       regex: https://www\\.gravatar\\.com
+#   #     - name: theme
+#   #       strategy: staleWhileRevalidate
+#   #       regex: /.*\\.(?:js|css|woff2|png|jpg|gif)$
+#   #     - name: cdn
+#   #       strategy: staleWhileRevalidate
+#   #       regex: https://cdn\\.yourdomain\\.com
+#   #     - name: json
+#   #       strategy: cacheFirst
+#   #       regex: your_data_prefix/.*\\.json
+
+#   # manifest.json
+#   # manifest:
+#   #   short_name:
+#   #   name:
+#   #   start_url: /
+#   #   theme_color: '#2a2b33'
+#   #   background_color: '#2a2b33'
+#   #   icons:
+#   #     - src: icon-194x194.png
+#   #       sizes: 194x194 512x512
+#   #       type: image/png
+#   #     - src: icon-144x144.png
+#   #       sizes: 144x144
+#   #       type: image/png
+
 pwa:
-  # Workbox (https://developers.google.com/web/tools/workbox/) is a JavaScript
-  # libraries for adding offline support to web apps,
-  # disabled by default, remove the hash to enable
-  # workbox:
-  #   # Workbox cdn, uses google by default, below is an example of using alicdn
-  #   cdn: https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js
-  #   module_path_prefix: https://g.alicdn.com/kg/workbox/3.3.0/
-  #   # Expire time in hour, 4 by default, set to 0 to be permanent,
-  #   # caches will be forcibly deleted the next time the site is updated.
-  #   expire: 4
-  #   # The worker script name, `sw.js` by default
-  #   name: sw.js
-  #   # Custom rules
-  #   rules:
-  #     - name: jsdelivr
-  #       strategy: staleWhileRevalidate
-  #       regex: https://cdn\\.jsdelivr\\.net
-  #     - name: gtm
-  #       strategy: staleWhileRevalidate
-  #       regex: https://www\\.googletagmanager\\.com\?id=.*
-  #     - name: gravatar
-  #       strategy: staleWhileRevalidate
-  #       regex: https://www\\.gravatar\\.com
-  #     - name: theme
-  #       strategy: staleWhileRevalidate
-  #       regex: /.*\\.(?:js|css|woff2|png|jpg|gif)$
-  #     - name: cdn
-  #       strategy: staleWhileRevalidate
-  #       regex: https://cdn\\.yourdomain\\.com
-  #     - name: json
-  #       strategy: cacheFirst
-  #       regex: your_data_prefix/.*\\.json
+  workbox:
+    cdn: https://g.alicdn.com/kg/workbox/3.3.0/workbox-sw.js
+    module_path_prefix: https://g.alicdn.com/kg/workbox/3.3.0/
+    expire: 4
+    name: sw.js
+    rules:
+      - name: jsdelivr
+        strategy: staleWhileRevalidate
+        regex: https://cdn\\.jsdelivr\\.net
+      - name: gtm
+        strategy: staleWhileRevalidate
+        regex: https://www\\.googletagmanager\\.com\?id=.*
+      - name: gravatar
+        strategy: staleWhileRevalidate
+        regex: https://www\\.gravatar\\.com
+      - name: theme
+        strategy: staleWhileRevalidate
+        regex: /.*\\.(?:js|css|woff2|png|jpg|gif)$
+      - name: json
+        strategy: cacheFirst
+        regex: /.*\\.json
 
-  # manifest.json
-  # manifest:
-  #   short_name:
-  #   name:
-  #   start_url: /
-  #   theme_color: '#2a2b33'
-  #   background_color: '#2a2b33'
-  #   icons:
-  #     - src: icon-194x194.png
-  #       sizes: 194x194 512x512
-  #       type: image/png
-  #     - src: icon-144x144.png
-  #       sizes: 144x144
-  #       type: image/png
+manifest:
+    short_name: 无名小筑
+    name: 无名小筑
+    start_url: /
+    theme_color: '#2a2b33'
+    background_color: '#2a2b33'
+    icons:
+      - src: /icons/512.png
+        sizes: 512x512
+        type: image/png
+      - src: /icons/256.png
+        sizes: 256x256
+        type: image/png
+      - src: /icons/192.png
+        sizes: 192x192
+        type: image/png
+      - src: /icons/128.png
+        sizes: 128x128
+        type: image/png
+      - src: /icons/96.png
+        sizes: 96x96
+        type: image/png
+      - src: /icons/64.png
+        sizes: 64x64
+        type: image/png
+      - src: /icons/48.png
+        sizes: 48x48
+        type: image/png
+      - src: /icons/32.png
+        sizes: 32x32
+        type: image/png
+      - src: /icons/16.png
+        sizes: 16x16
+        type: image/png
+
+
+
+
+
+
+
+
 
 # Plugins
 # plugins:
@@ -623,3 +749,27 @@ pwa:
 #     template: snippets/snippet-1.html
 
 # test push
+
+# Plugins
+plugins:
+  - //cdn.jsdelivr.net/gh/idkzr/static@master/inside/bsz.js
+  - //cdn.jsdelivr.net/gh/idkzr/static@master/inside/themes.js
+  - //cdn.jsdelivr.net/gh/idkzr/static@master/inside/theme.js
+  - position: sidebar
+    template: |
+      <is-palette2></is-palette2>
+  - //cdn1.lncld.net/static/js/3.0.4/av-min.js
+  - //unpkg.com/valine/dist/Valine.min.js
+  - position: comments
+    template: |
+      <div id="vcomment"></div>
+      <script>
+        new Valine({
+          el: '#vcomment',
+          appId: 'LHw9i58rBVMqNJq52cnfMI',
+          appKey: '5p28b9Ix3q7EycvF',
+          placeholder: '说点什么？',
+          avatar: 'robohash',
+          path: location.pathname
+        })
+      </script>
