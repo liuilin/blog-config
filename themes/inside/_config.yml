@@ -22,7 +22,7 @@ appearance:
   # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
 
   # Maximum width of content
-  content_width: 640
+  content_width: 1000
 
   # Fonts
   font:
@@ -755,11 +755,13 @@ plugins:
   - //cdn.jsdelivr.net/gh/idkzr/static@master/inside/bsz.js
   - //cdn.jsdelivr.net/gh/idkzr/static@master/inside/themes.js
   - //cdn.jsdelivr.net/gh/idkzr/static@master/inside/theme.js
+ # 调色板插件
   - position: sidebar
     template: |
       <is-palette2></is-palette2>
   - //cdn1.lncld.net/static/js/3.0.4/av-min.js
   - //unpkg.com/valine/dist/Valine.min.js
+  # 评论插件
   - position: comments
     template: |
       <div id="vcomment"></div>
