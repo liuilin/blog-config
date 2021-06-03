@@ -761,7 +761,7 @@ plugins:
       <is-palette2></is-palette2>
   - //cdn1.lncld.net/static/js/3.0.4/av-min.js
   - //unpkg.com/valine/dist/Valine.min.js
-  # 评论插件
+  # 评论插件1
   - position: comments
     template: |
       <div id="vcomment"></div>
