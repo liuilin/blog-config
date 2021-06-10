@@ -105,7 +105,7 @@ theme: inside
 deploy:
   type: git
   repo: https://github.com/liuilin/liuilin.github.io.git
-  branch: main
+  branch: master
 
 
 algolia:
