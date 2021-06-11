@@ -1,15 +1,15 @@
 ### CSS 学习资源
 
-最好的调试方式：加border
+最好的调试方式：加 border
 
-> 想知道自己CSS写的好不好就去dribble去找一个来实现
+> 想知道自己 CSS 写的好不好就去 dribble 去找一个来实现
 
 1.  Google: 关键词 MDN
 2.  [CSS Tricks](https://css-tricks.com/)
 3.  [Google: 阮一峰 css](https://www.google.com/search?q=%E9%98%AE%E4%B8%80%E5%B3%B0+css)
 4.  [张鑫旭的 240 多篇 CSS 博客](http://www.zhangxinxu.com/wordpress/category/css/page/25/)
 5.  [Codrops 炫酷 CSS 效果](https://tympanus.net/codrops/category/playground/)
-6.  [CSS揭秘](http://www.ituring.com.cn/book/1695)
+6.  [CSS 揭秘](http://www.ituring.com.cn/book/1695)
 7.  [CSS 2.1 中文 spec](http://cndevdocs.com/)
 8.  [Magic of CSS](http://adamschwartz.co/magic-of-css/) 免费在线书
 
@@ -20,7 +20,7 @@
 
 ###  知识点
 
-1. 如何做横向布局（左右float + clearfix）
+1. 如何做横向布局（左右 float + clearfix）
 
 2. 如何取色、量尺寸、预览字体（Word）
 
@@ -50,7 +50,7 @@
 
 > IDE live template：.clearfix 清除浮动
 
-- 块级元素高度：由内部**文档流**高度的总和决定的
+- 块级元素高度：由内部 **文档流** 高度的总和决定的
 
 - 文档流：内联元素从左往右，块级元素从上到下另起一行
 
@@ -58,19 +58,19 @@
 
   > 内联元素不接受宽高（宽度由元素决定），把它转为块元素（display:inline-block;）
   >
-  > 用display:inline-block;转为内联元素后，需要加入vertical-align：top来修复尾部bug
+  > 用 display:inline-block; 转为内联元素后，需要加入 vertical-align：top 来修复尾部 bug
   >
   > 转为内联元素后居中方式：text-align : center;
   >
   > 方应杭 css line height
 
-- 宽高能不写就不写，容易有bug
+- 宽高能不写就不写，容易有 bug
 
-  > span里面用 padding:4px 16px;line-height:22px; 来替换 width:70px; height:29px; line-height:29px; text-align: center; 
+  > span 里面用 padding:4px 16px;line-height:22px; 来替换 width:70px; height:29px; line-height:29px; text-align: center; 
   
 - 绝对定位是脱离文档流的，那它们就不知道容器有多高（所以要给个高度）
 
-- 推荐优先使用padding，可以配合border-box
+- 推荐优先使用 padding，可以配合 border-box
 
 - 字体之类的就看淘宝、京东这类大网站，天天有人看不会出错
 
@@ -82,13 +82,13 @@ css animation generator：动画
 
 css shadow generator：阴影
 
-> 出现问题之后看不出来可以去mdn找正确的例子，在上面的基础上修改
+> 出现问题之后看不出来可以去 mdn 找正确的例子，在上面的基础上修改
 
 web page free psd：设计素材
 
 ### Tricks
 
-1. 父元素高度有了，子元素高度可写100%（父变子变）
-2. css层级最好不要超过5个，超了就考虑重新起一个名字
-3. 命名：bar-inner，<kbd>-</kbd>只用来做结构（表示内部的bar），不作为起名字
-4. 写CSS要从内到外，从上到下
+1. 父元素高度有了，子元素高度可写 100%（父变子变）
+2. css 层级最好不要超过 5 个，超了就考虑重新起一个名字
+3. 命名：bar-inner，<kbd>-</kbd> 只用来做结构（表示内部的 bar），不作为起名字
+4. 写 CSS 要从内到外，从上到下
