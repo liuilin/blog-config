@@ -1,7 +1,7 @@
 ---
 title: 本地 Docker 搭建 Nginx 反向代理 Nacos 集群
 date: 2021-03-19 08:41:29
-tags: Docker,Nacos,Nginx
+tags: Docker
 ---
 # 本地 Docker 搭建 Nginx 反向代理 Nacos 集群
 
