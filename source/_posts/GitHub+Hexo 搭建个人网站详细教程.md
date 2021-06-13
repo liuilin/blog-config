@@ -1,3 +1,8 @@
+---
+title: DOM
+date: 2021-03-20 08:41:29
+tags: GitHub
+---
 # GitHub+Hexo 搭建个人网站
 
 ## 什么是 Hexo？
@@ -156,7 +161,7 @@ $blog: git clone https://github.com/ikeq/hexo-theme-inside.git themes/inside
 
 创建一个图床仓库 image-bed ，分支名要设 GitHub 能看到的分支
 
-使用 jsDelivr CDN 对 Github 图床进行加速，PicGo 配置自定义域名
+使用 jsDelivr CDN 对 GitHub 图床进行加速，PicGo 配置自定义域名
 
 ![image-20210319141245558](https://cdn.jsdelivr.net/gh/liuilin/image-bed@master/blog/img/image-20210319141245558.png)
 
@@ -168,16 +173,16 @@ $blog: git clone https://github.com/ikeq/hexo-theme-inside.git themes/inside
 
 ![image-20210319141948636](https://cdn.jsdelivr.net/gh/liuilin/image-bed@master/blog/img/image-20210319141948636.png)
 
-> Github 仓库的容量有 1G 的上限，但对个人博客来说绰绰有余
+> GitHub 仓库的容量有 1G 的上限，但对个人博客来说绰绰有余
 
 设置参数说明：
 
 - 设定仓库名：填入你上面创建的仓库名，格式为：用户名/仓库名；
 - 设定分支名：一般填写 master 即可；
-- 设定 Token：将上一步 Github 配置中得到的 Token 粘贴进去；
-- 指定存储路径：图片在 Github 仓库中的存储路径，例如：blog/img/
+- 设定 Token：将上一步 GitHub 配置中得到的 Token 粘贴进去；
+- 指定存储路径：图片在 GitHub 仓库中的存储路径，例如：blog/img/
 - 设定自定义域名：此处直接设置 jsDelivr 加速的访问地址，例如：自定义域名设为 https://cdn.jsdelivr.net/gh/liuilin/image-bed@master 来进行 CDN 加速（https://cdn.jsdelivr.net/gh/ 不能省略，gh 为 GitHub 缩写，后面接 GitHub 名字 + 仓库 + @仓库branch）
-  1. gh：固定写上，为 GitHub 缩写，表示来自 Github 的仓库
+  1. gh：固定写上，为 GitHub 缩写，表示来自 GitHub 的仓库
   2. liuilin/image-bed：仓库的具体位置
   3. master 仓库的分支
 
@@ -188,8 +193,8 @@ PicGo 配置完成后在 Typora 设置中 PicGo 程序路径，然后将图片�
 使用 jsDelivr 优势
 
 > 使用 jsDelivr 加速静态文件访问，能够优化博客体验。
-> 在 Github 存储图片，利于博主对于图片的掌控。
-> 使用 PicGo 的原因是因为能够方便地将上传图片到 Github，并直接获取 jsDelivr 的加速后的图片地址。
+> 在 GitHub 存储图片，利于博主对于图片的掌控。
+> 使用 PicGo 的原因是因为能够方便地将上传图片到 GitHub，并直接获取 jsDelivr 的加速后的图片地址。
 
 ## 推送
 
