@@ -1,5 +1,5 @@
 ---
-title: DOM
+title: GitHub+Hexo 搭建个人网站
 date: 2021-03-20 08:41:29
 tags: GitHub
 ---
