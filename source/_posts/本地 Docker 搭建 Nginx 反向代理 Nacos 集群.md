@@ -26,7 +26,7 @@ tags: Docker
   .
   ├── README.md
   ├── README_ZH.md
-  ├── build								 # nacos 镜像制做的源码
+  ├── build								 # nacos 镜像制做的源码 
   │   ├── Dockerfile
   │   ├── bin
   │   │   └── docker-startup.sh
