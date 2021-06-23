@@ -35,7 +35,7 @@ tags: Docker
   │   └── init.d
   │       └── custom.properties
   ├── changlog
-  ├── env									 # docker compose 环境变量
+  ├── env									 # docker compose 环境变量 
   │   ├── mysql.env
   │   ├── nacos-embedded.env
   │   ├── nacos-hostname.env
