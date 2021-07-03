@@ -176,8 +176,47 @@ VISUAL 批量选中模式下（<kbd>gg</kbd> - <kbd>V</kbd> - <kbd>G</kbd>），
 
 :e ~/.vimrc：vim normal 模式下编辑文件
 
-### 删除当前屏内容
+### vim 删除当前屏内容命令
 
 <kbd>HVLd</kbd>
 
-## 正则给 markdown 文件批量添加 <kbd> 符号
+### 正则给 markdown 文件批量添加 <kbd> 符号
+
+### 多行折叠为一行
+wget
+vim
+touch
+
+vim command: 
+In command mode:
+
+```
+[range]j[lines]
+```
+
+For example: here you want to do the whole buffer:
+
+```
+%j
+```
+
+If you just wanted to do 10 lines from the current cursor position:
+
+```
+j10
+```
+
+If you don’t want to replace the new lines with spaces, use ! after j.
+
+```
+%j!
+j!10
+```
+
+And for the uberfancy:
+
+```
+5j20
+```
+
+It would go to line 5, and join the next 20 lines.
