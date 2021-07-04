@@ -95,7 +95,7 @@ tags:
 2. i 写入模式、i 插入之前、a 插入之后、A 行尾插入、I 行首插入、o 下行插入、O 上行插入 x 删除光标后一个字符，u 是撤销 U、Ctrl+r
    d + ←→删除光标←→字符（d +3←）、dd 删除一行（其实是剪切，p 粘贴）
    y+ ←→复制光标←→字符 （y+3←）
-   
+
    db/dw/de/x
    
    剪切括号等内的内容（进入插入模式）：<kbd>ci”</kbd><kbd>ci’</kbd><kbd>ci [</kbd><kbd>ci (</kbd>
@@ -107,8 +107,15 @@ tags:
    剪切到制定字符：c/d/y f% s
    
    c 删除并进入写入模式、w 光标向下移动一个词、cw 删除一个词并进入写入模式、b 光标到上一个词 、ciw 词中删除一个词并进入写入模式，yi
+
+   > ci" - change inside double quotes
+   >
+   > ci) - change inside curved brackets
+   >
+   > ci} - change inside curly brackets
    
    f：找当前行的词
+
    / 搜索、n 下 N 上
    
    (n) p/P：粘贴 n 行
