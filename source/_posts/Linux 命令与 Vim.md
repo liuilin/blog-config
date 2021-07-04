@@ -141,15 +141,39 @@ tags:
    ：source $MYVIMRC 刷新 vim
    jkhl 上下左右
    ：split 上下分屏 、：vsplit 左右分屏 Q 退出
-   ~/.vim/vimrc
-   noremap a b a 键改 b 键
-   map a b a 键改 b 键
-   syntax on 打开高亮
-   set number 显示行号
-   set wildmenu ：命令补全
-   set hlsearch / 搜索高亮
-   set incsearch 一面输入一面高亮
-   set ignorecase 忽略大小写 43：35 美化！
+
+   config: ~/.vim/vimrc
+
+   let mapleader=" " " 将leader键（\键,类似于Windows键）换成空格（相当于空格键）
+   syntax on " 开启语法高亮
+   set number " 显示行号
+   set relativenumber " 显示从当前行数的前后行数
+   set cursorline " 高亮显示当前行
+   set wrap " 自动换行
+   set showcmd " 显示指令
+   set wildmenu " vim 命令行命令补全
+   set hlsearch " 高亮显示搜索
+   set incsearch " 动态高亮搜索"
+   set smartcase " 智能大小写搜索
+   set ignorecase " 忽略大小写
+
+   exec "nohlsearch" " 打开是运行指令 取消上回搜索内容的高亮"noremap a b " 将 a 替换为 b 
+   "noremap A 5b " 将 A 替换为 5b
+   "noremap = nzz " 将 n 替换为 =zz " 用 zz 将该行变成中心点
+   "noremap - Nzz " 将 N 替换为 -zz
+   noremap <LEADER><CR> :nohlearch<CR> " 将 <LEADER><CR> 替换为 :nohlearch<CR> 用于快捷取消搜索高亮
+
+   map s <nop>  " 将 s 的指令设置为空
+   map S :w<CR> " 将 S 的指令设置成 :w  “ <CR> 代表回车
+   map Q :q<CR> " 将 Q 的指令设置成 :q
+   map R :source $MYVIMRC<CR> " 将 R 的指令设置成 重载vimrc配置
+
+   ":split  " 上下分屏 :q 退出
+   ":vsplit " 左右分屏
+
+   " <Operation(操作)> <Motion(动作)>
+   " d 剪切操作(剪切可看做删除), y 复制操作, p 粘贴操作， c 剪切后修改操作
+   " ← 左动作， → 右动作， 3← 3个左动作， b 选择光标开启到上一个词后的内容， i 指明光标在词中，当前词待操作， w 选择光标开始到下个词前的内容， iw 在当前词之间选择该， y3← 向右复制， f 查找动作
 
 #### 插件
 
