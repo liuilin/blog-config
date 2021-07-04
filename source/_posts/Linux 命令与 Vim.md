@@ -6,6 +6,7 @@ tags:
 # Linux 命令与 Vim
 
 ### Linux 命令
+[Linux工具快速教程 — Linux Tools Quick Tutorial](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 
 > GitHub：服务器配置 https://gist.github.com/search?o=desc&q=.bashrc&s=stars
 
