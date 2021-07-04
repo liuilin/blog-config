@@ -153,6 +153,17 @@ tags:
 
 #### 插件
 
+插件管理工具：[junegunn/vim-plug: Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
+
+example: add below to .vimrc
+```vim
+call plug#begin('~/.vim/plugged')
+Plug 'connorholyday/vim-snazzy'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+```
+
+
 Google：best vim/idea/vscode config github 找到
 
 vim plugin site:github.com
