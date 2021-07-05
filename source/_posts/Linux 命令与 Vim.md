@@ -186,7 +186,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 ```
-
+:PlugInstall
 
 Google：best vim/idea/vscode config github 找到
 
@@ -263,3 +263,45 @@ And for the uberfancy:
 ```
 
 It would go to line 5, and join the next 20 lines.
+
+### Vim Tricks
+[At least one Vim trick you might not know • Hillel Wayne](https://www.hillelwayne.com/post/intermediate-vim/)
+
+" Toggle Spelling Check with <space>sc
+" <z=> 智能修改单词
+map <LEADER>sc :set spell!<CR>
+noremap <C-x> bea<C-x>s
+inoremap <C-x> <Esc>ea<C-x>s
+
+Ctrl+o: back to pre edit place
+Ctrl+i: back to last edit place
+
+gf: go to file
+Ctrl+o: back to pre edit place
+
+:%TOhtml: vim convert file to html
+
+var name='lin'
+var name='lin'
+var name='lin'
+> into vim block mode, 3j :'<,'>norm cs'"
+> into vim vusual mode, V2j :'<,'>norm cs'"
+
+gs: toggle code true/false
+
+:w !wl-copy: copy file enable
+
+1. 对齐符号
+   > set mouse=a          
+   > set encoding=utf-8   
+   > set clipboard=unnamed
+   :'<,'>Tabularize /=
+
+   录制宏，代码块格式化等号，可以用 map 更改为快捷键
+   qaV}:'<,'>Tabularize /=
+
+   SimpleFold 插件：<leader>o
+   ?tagbar : shift+t
+   vim-signature: ma - 代码标签标记. <space> to next marked place
+   semshi: 高亮当前光标所在的所有单词
+   coc: 重构改变量名: <space>rn
