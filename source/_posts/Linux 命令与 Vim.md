@@ -296,6 +296,9 @@ gs: toggle code true/false
    > set encoding=utf-8   
    > set clipboard=unnamed
    :'<,'>Tabularize /=
+   r: 调出执行 python 代码
+   si | :term: split window and open new terminal
+   
 
    录制宏，代码块格式化等号，可以用 map 更改为快捷键
    qaV}:'<,'>Tabularize /=
@@ -305,3 +308,10 @@ gs: toggle code true/false
    vim-signature: ma - 代码标签标记. <space> to next marked place
    semshi: 高亮当前光标所在的所有单词
    coc: 重构改变量名: <space>rn
+   far: 搜索文件 <space>f
+   FZF: Ctrl+p 跳转文件
+   NERDTree: tt 文件目录列表
+   vim-table-mode: <space>tm 开启 markdown 自动排版
+   vim-startify: 进入最近编辑的文件
+
+   :help NERDTree: 查看插件文档
