@@ -305,13 +305,52 @@ gs: toggle code true/false
 
    SimpleFold 插件：<leader>o
    ?tagbar : shift+t
-   vim-signature: ma - 代码标签标记. <space> to next marked place
+   vim-signature: 书签. ma: mark 'a' bookmark. <space> to next marked place
    semshi: 高亮当前光标所在的所有单词
    coc: 重构改变量名: <space>rn
-   far: 搜索文件 <space>f
-   FZF: Ctrl+p 跳转文件
+   Far.vim: 搜索代码 <space>f
+   FZF: Ctrl+p 跳转文件（文件搜索最强）
    NERDTree: tt 文件目录列表
    vim-table-mode: <space>tm 开启 markdown 自动排版
    vim-startify: 进入最近编辑的文件
+   vim-multiple-cursor: 快速选中多行编辑
+   wildfire.vim: 类似于 vscode 的 Ctrl+w 选中单词
+   thesaurus_query: 近义词插件
+   Startify: 进入编辑器显示东西用的
+   emmet: 快速写 HTML 插件
+   Bullets.vim: 文件中列表累加
 
    :help NERDTree: 查看插件文档
+
+
+
+   ranger:
+   S: go to path
+
+   Shift+m: mkdir. create a directory
+
+   Shift+v: touch a file
+
+   cw: rename, 可以用 vim 操作，A 在文件末尾修改
+
+   [: folder switch
+
+   v: select all file
+
+   dU: check file/folder size
+
+   dD: 删除文件夹
+
+   w: task manager
+
+   dd: cancel opration
+
+   c: compress
+
+   X: extract here
+
+   ct: convert to pdf
+
+   ydv: youtube download
+
+   zh: show dotfiles
