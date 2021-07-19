@@ -7,7 +7,7 @@ tags:
 
 [小森林导航]: http://hao.xsld.com/
 
-1. 如何做好CHROME浏览器的书签管理？
+1. 如何做好CHROME浏览器的书签管理
 
    - 删除
 
