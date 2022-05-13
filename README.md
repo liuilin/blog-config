@@ -1,4 +1,4 @@
-> 首次搭建 Hexo，请先看文章《GitHub+Hexo 搭建个人网站》
+> 如果是首次搭建 Hexo，请先看文章《GitHub+Hexo 搭建个人网站》
 ## 恢复环境
 
 ```bash
