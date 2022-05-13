@@ -2,7 +2,7 @@
 ## 恢复环境
 
 ```bash
-git clone https://github.com/liuilin/blog-content-config.git
+git clone https://github.com/liuilin/hexo-blog-config.git
 npm install # 安装依赖的 module 模块
 ```
 
