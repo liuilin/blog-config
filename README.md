@@ -3,7 +3,7 @@
 
 ```bash
 git clone https://github.com/liuilin/blog-content-config.git
-npm install # 安装依赖的 module 模块。
+npm install # 安装依赖的 module 模块
 ```
 
 ### Hexo 相关执行命令
