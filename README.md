@@ -2,7 +2,12 @@
 ## 恢复环境
 
 ```bash
-git clone https://github.com/liuilin/hexo-blog-config.git
+git clone https://github.com/liuilin/hexo-blog-config.git # 本仓库 git 地址
+# 设置代理
+npm config set https-proxy "http://localhost:7890"
+npm config set proxy "http://localhost:7890"
+npm config set registry https://registry.npm.taobao.org # 配置淘宝源，否则下载 hexo 什么的慢，还能报错
+npm install hexo-cli -g # 安装 hexo
 npm install # 安装依赖的 module 模块
 ```
 
