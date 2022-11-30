@@ -5,50 +5,123 @@ tags:
 ---
 # Linux 命令与 Vim
 
+### Linux 目录详解
+
+// TODO 目录解释
+
 ### Linux 命令
+
+[【解析 Linux 命令行参数】explainshell.com - match command-line arguments to their help text](https://explainshell.com/)
+
 [Linux工具快速教程 — Linux Tools Quick Tutorial](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 
-> GitHub：服务器配置 https://gist.github.com/search?o=desc&q=.bashrc&s=stars
+[Linux命令搜索引擎 命令，Linux Linux命令搜索引擎 命令详解：最专业的Linux命令大全，内容包含Linux命令手册、详解、学习，值得收藏的Linux命令速查手册。 - Linux 命令搜索引擎](https://wangchujiang.com/linux-command/)
+
+[Linux命令大全(手册) – 真正好用的Linux命令在线查询网站](https://www.linuxcool.com/)
+
+> 搜索 GitHub 上的 Linux 配置 https://gist.github.com/search?o=desc&q=.bashrc&s=stars
+
+### 实用命令
+
+[【Find 实用命令】35 Practical Examples of Linux Find Command](https://www.tecmint.com/35-practical-examples-of-linux-find-command/)
+
+使用名称查找文件，参数 -name 使用名称查找文件；-iname 使用名称并忽略大小写查找文件
+
+```bash
+find . -name a.txt
+```
+
+指定目录下搜索所有文件，且文件内容中包含端口为 “10888” 的文件
+
+```bash
+find /opt -type f -name '*' | xargs grep "10888"
+```
+
+基于正则表达式匹配文件路径
+
+```shell
+find . -regex ".*\(\.java\|\.python\)$"
+```
+
+根据文件类型进行搜索：f 普通文件 l 符号连接 d 目录 c 字符设备 b 块设备 s 套接字 p Fifo
+
+```shell
+find . -type 类型参数
+```
+
+使用名称查找 Java 类型的文件
+
+```bash
+find . -type f -name '*.java'
+```
+
+磁盘空间不够用时搜索大于 1G 的文件，单位 b c w k M G
+
+```bash
+find / -size +1G
+```
+
+#### `-exec`选项与其他命令结合使用
+
+查找当前目录下所有.txt文件并把他们拼接起来写入到all.txt文件中
+
+```shell
+find . -type f -name "*.txt" -exec cat {} \;> /all.txt
+```
+
+找出当前目录下所有.txt文件并以“File:文件名”的形式打印出来
+
+```shell
+find . -type f -name "*.txt" -exec printf "File: %s\n" {} \;
+```
+
+找到匹配的文件并删除
+
+```bash
+find . \( -name '*.png' -o -name '*.jpg' \) -exec rm {} \;
+```
 
 #### 常见的自带命令
 
-| ** 操作 **              | ** 命令 **                                                                                     |
-| ----------------------- | ---------------------------------------------------------------------------------------------- |
-| 进入目录                | cd                                                                                             |
-| 显示当前目录            | pwd                                                                                            |
-| 创建目录                | mkdir 目录名                                                                                   |
-| 创建目录                | mkdir -p 目录路径                                                                              |
-| 我是谁                  | whoami                                                                                         |
-| --                      | --                                                                                             |
-| 查看路径                | ls 路径                                                                                        |
-| 查看路径                | ls -a 路径                                                                                     |
-| 查看路径                | ls -l 路径                                                                                     |
-| 查看路径                | ls -al 路径                                                                                    |
-| --                      | --                                                                                             |
-| 创建文件 / 覆盖原有文件 | echo "1" > 文件路径                                                                            |
-| 强制创建文件            | echo "1" >! 文件路径                                                                           |
-| 追加文件内容            | echo "1" >> 文件路径                                                                           |
-| 创建文件                | touch 文件名                                                                                   |
-| 改变文件更新时间        | touch 文件名                                                                                   |
-| --                      | --                                                                                             |
-| 复制文件                | cp 源路径 目标路径                                                                             |
-| 复制目录                | cp -r 源路径 目标路径                                                                          |
-| --                      | --                                                                                             |
-| 移动节点                | mv 源路径 目标路径                                                                             |
-| --                      | --                                                                                             |
-| 删除文件                | rm 文件路径                                                                                    |
-| 强制删除文件            | rm -f 文件路径                                                                                 |
-| 删除目录                | rm -r 目录路径                                                                                 |
-| 强制删除目录            | rm -rf 目录路径                                                                                |
-| --                      | --                                                                                             |
-| 查看目录结构            | tree                                                                                           |
-| 建立软链接              | ln -s 真实文件 链接                                                                            |
-| --                      | --                                                                                             |
-| 下载文件                | curl -L [https://www.baidu.com](https://www.baidu.com/) > baidu.html                           |
+| **操作**                | **命令**                                                     |
+| ----------------------- | ------------------------------------------------------------ |
+| 进入目录                | cd                                                           |
+| 显示当前目录            | pwd                                                          |
+| 创建目录                | mkdir 目录名                                                 |
+| 创建目录                | mkdir -p 目录路径                                            |
+| 当前登录用户是谁        | whoami                                                       |
+| --                      | --                                                           |
+| 查看路径                | ls 路径                                                      |
+| 查看路径                | ls -a 路径                                                   |
+| 查看路径                | ls -l 路径                                                   |
+| 查看路径                | ls -al 路径                                                  |
+| --                      | --                                                           |
+| 创建文件 / 覆盖原有文件 | echo "1" > 文件路径                                          |
+| 强制创建文件            | echo "1" >! 文件路径                                         |
+| 追加文件内容            | echo "1" >> 文件路径                                         |
+| 创建文件                | touch 文件名                                                 |
+| 改变文件更新时间        | touch 文件名                                                 |
+| --                      | --                                                           |
+| 复制文件                | cp 源路径 目标路径                                           |
+| 复制目录                | cp -r 源路径 目标路径                                        |
+| --                      | --                                                           |
+| 移动节点                | mv 源路径 目标路径                                           |
+| --                      | --                                                           |
+| 删除文件                | rm 文件路径                                                  |
+| 强制删除文件            | rm -f 文件路径                                               |
+| 删除目录                | rm -r 目录路径                                               |
+| 强制删除目录            | rm -rf 目录路径                                              |
+| --                      | --                                                           |
+| 查看目录结构            | tree                                                         |
+| 建立软链接              | ln -s 真实文件 链接                                          |
+| --                      | --                                                           |
+| 下载文件                | curl -L [https://www.baidu.com](https://www.baidu.com/) > baidu.html |
 | 拷贝网页                | wget -p -H -e robots=off [https://www.baidu.com](https://www.baidu.com/) (Windows 不支持 wget) |
-| 磁盘占用                | df -kh                                                                                         |
-| 当前目录大小            | du -sh .                                                                                       |
-| 各文件大小              | du -h                                                                                          |
+| 磁盘占用                | df -kh                                                       |
+| 当前目录大小            | du -sh .                                                     |
+| 各文件大小              | du -h                                                        |
+
+
 
 > Google: Linux 查看文件内容
 >
