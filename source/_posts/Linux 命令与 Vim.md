@@ -5,9 +5,15 @@ tags:
 ---
 # Linux 命令与 Vim
 
+### Linux 学习资料
+
+[Baeldung on Linux](https://www.baeldung.com/linux/)
+
 ### Linux 目录详解
 
-// TODO 目录解释
+[Linux 目录结构 - 知乎](https://zhuanlan.zhihu.com/p/60423235)
+
+[What does /opt mean in Linux? | Baeldung on Linux](https://www.baeldung.com/linux/opt-directory)
 
 ### Linux 命令
 
@@ -27,8 +33,10 @@ tags:
 
 使用名称查找文件，参数 -name 使用名称查找文件；-iname 使用名称并忽略大小写查找文件
 
+查找根目录下的 MySQL 配置 my.cnf
+
 ```bash
-find . -name a.txt
+find / -name 'my.cnf'
 ```
 
 指定目录下搜索所有文件，且文件内容中包含端口为 “10888” 的文件
@@ -146,6 +154,68 @@ find . \( -name '*.png' -o -name '*.jpg' \) -exec rm {} \;
 - \> 重定向
 
 - | 管道
+
+
+
+传统起一个服务 shell 脚本：
+
+```shell
+#!/bin/bash
+baseName='ops-server'
+cd /opt/ehr/ops-server
+mv ./target/ops-server.jar ops-server.jar
+kill -9 `cat java.pid`
+nohup java -Djava.security.egd=file:/dev/./urandom -Xms512m -Xmx1024m -server -jar $baseName.jar  --spring.profiles.active=dev   > log.txt 2>&1 &
+echo "$!" > java.pid
+```
+
+
+
+### 实战
+
+实际遇到的问题：早上突然服务接口全部出现 Gateway 504
+
+使用 `cat .bash_history` 发现之前有人执行了以下命令
+
+```shell
+cd /opt/ehr/
+cd gateway/
+./start.sh
+cd ops-server/
+./startDev.sh
+```
+
+他重启了 ops 项目服务，/opt/ehr/ops-server 下的目录如下
+
+```bash
+-rw-r--r--. 1 root root       770 Aug 30 15:16 bootstrap.yml
+-rw-r--r--. 1 root root       242 Nov  7 16:14 Dockerfile
+-rw-r--r--. 1 root root         5 Dec  1 10:04 java.pid
+-rw-r--r--. 1 root root         0 Oct 31 17:37 log
+drwxr-xr-x. 3 root root        24 Jun 28 16:15 logs
+-rw-r--r--. 1 root root   2038118 Dec  1 10:21 log.txt
+-rw-------. 1 root root     37064 Aug 30 15:07 nohup.out
+-rw-r--r--. 1 root root 141348197 Dec  1 10:04 ops-server.jar
+-rwxrwxrwx. 1 root root       332 Aug 30 15:15 startDev.sh
+-rw-r--r--. 1 root root       290 Aug 29 15:20 start.sh
+drwxr-xr-x. 2 root root         6 Dec  1 10:04 target
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
